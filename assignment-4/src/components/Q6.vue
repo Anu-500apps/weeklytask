@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 align="center">This is Question 6</h1>
-    <b-form-select v-model="value" :options="countries"></b-form-select>
+    <b-form-select v-model="value" :options="countries"></b-form-select><br><br>
     <b-button variant="primary" @click="getData">Get Data</b-button>
     <b-card v-for="value in items" :key="value.domains" class="mb-2">
       <b-card-text>university_name:-- {{ value.university_name }} 
@@ -17,7 +17,7 @@
 <script>
 const { getNames } = require("country-list");
 export default {
-  name: "QueS6",
+  name: "QuE6",
   data() {
     return {
       value: "",
@@ -57,5 +57,6 @@ export default {
   },
 };
 </script>
+
 
 
