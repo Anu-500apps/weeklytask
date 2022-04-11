@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <h1>it is CRUD oprations</h1>
+        <p id="result"></p>
+        <form onsubmit="result">
+        <label for="name">Fisrtname:</label>
+        <input type="text" placeholder="first" id="anu" required><br><br>
+        <label for="name">Secondname</label>
+        <input type="text" placeholder="second" id="anu1" required><br><br>
+        <button type="submit" onclick="f1()">Add</button>
+        <button type="submit" onclick="f1()">Update</button>
+        <button type="submit" onclick="f1()">Delete</button>
+    </form>
+    <table id="result">
+        <thead>
+            <tr>
+            <th>First name</th>
+            <th>last name</th>
+        </tr>
+        <tr>
+            <td>Anu</td>
+            <td>Radha</td>
+        </tr>
+        </thead>
+    </table>
+    </head>
+    <body>
+    <script>
+        function f1(){
+           document.write(document.getElementById("result").value=anu.value +" "+ anu1.value)
+        }
+
+    </script>
+    </body>
+</html>
