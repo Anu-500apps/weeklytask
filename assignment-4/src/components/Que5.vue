@@ -6,7 +6,7 @@
       <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
     </div>
 
-    <b-button @click="getData()">Click Me!</b-button>
+    <b-button @click="getData()" class="btn btn-success">Click Me!</b-button>
 
     <div>
       <center>
@@ -49,10 +49,10 @@ export default {
       options: {
         //method: "POST",
 
-        url: "http://universities.hipolabs.com/search?country",
+        url: "http://universities.hipolabs.com/search?country="+this.text,
 
 
-        data: { search: "" },
+        Fetchdata: { search: "" },
       },
 
       text: "",
