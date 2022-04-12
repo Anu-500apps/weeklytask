@@ -9,7 +9,7 @@
       <b-dropdown-item @click="canada()">canada</b-dropdown-item>
     </b-dropdown>
     <b-card>
-      {{posts}}
+      <!-- {{posts}} -->
         <b-card v-for="data1 in posts" :key="data1.id">
           <b-row>
             <b-col cols="3.5">University Name:{{ data1.name }}</b-col>
