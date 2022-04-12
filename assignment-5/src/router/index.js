@@ -6,8 +6,8 @@ import Que3 from '../components/Que3'
 import Que4 from '../components/Que4'
 import Que6 from '../components/Que6'
 import Q6 from '../components/Q6'
-import Q1 from '../components/assignment-5/Question1'
-import Q2 from '../components/assignment-5/Question2'
+import Q1 from '../components/assignment-6/Question1'
+import Q2 from '../components/assignment-6/Question2'
 
 
 Vue.use(Router)

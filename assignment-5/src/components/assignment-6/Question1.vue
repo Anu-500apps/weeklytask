@@ -1,14 +1,25 @@
 <template>
   <div>
     <h1 align="center">This is Question 1</h1>
-    <b-form-select v-model="value" :options="countries"></b-form-select><br><br>
-    <b-button variant="warning" @click="getData">Get Data</b-button><br><br>
-    <form class="form-inline my-2 my-lg-0">
+    <b-form-select v-model="value" :options="countries"></b-form-select
+    ><br /><br />
+    <b-button variant="warning" @click="getData">Get Data</b-button><br /><br />
+    <center>
+      <input
+        type="text"
+        name="search"
+        id="search"
+        v-on:keyup="search()"
+        placeholder="search .."
+      />
+    </center>
+    <br /><br /><br />
+    <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button @click="getData" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <b-table striped hover :items="items">
-    <p>university_name:-- {{ value.university_name }}</p>
+    </form> -->
+    <b-table striped hover :items="items" id="mytable">
+      <p>university_name:-- {{ value.university_name }}</p>
       <p>domains:{{ value.domains }}</p>
       <p @click="redirect(value.website_url)">
         website_url:{{ value.website_url }}
@@ -56,6 +67,31 @@ export default {
           state_province: row["state-province"],
         };
       });
+    },
+    search() {
+      var searchbar, filter, table, tr, td, i, txt;
+
+      searchbar = document.getElementById("search");
+
+      filter = searchbar.value.toUpperCase();
+
+      table = document.getElementById("mytable");
+
+      tr = table.getElementsByTagName("tr");
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+
+        if (td) {
+          txt = td.textContent || td.innerText;
+
+          if (txt.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
     },
   },
 };
