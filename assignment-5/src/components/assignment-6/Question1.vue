@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 align="center">This is Question 1</h1>
+    <h1 align="center">This is Question-1</h1>
     <b-form-select v-model="value" :options="countries">
     </b-form-select><br /><br />
     <b-button variant="warning" @click="getData">Get Data</b-button><br /><br />
@@ -66,63 +66,9 @@ export default {
   name: "QuE1",
   data() {
     return {
-      items:[
-    //     {
-    //   "state-province":"Dehradun",
-    //   "country":"India",
-    //   "name":"University of Petroleum and Energy Studies",
-    //   "web_pages":
-    //      "https://www.upes.ac.in/",
-    //   "domains":
-    //      "upes.ac.in",
-    //   "alpha_two_code":"IN"
-    //  },
-    //  {
-    //   "state-province":"Punjab",
-    //   "country":"India",
-    //   "name":"DAV Institute of Engineering & Technology",
-    //   "web_pages":[
-    //      "http://www.davietjal.org/"
-    //   ],
-    //   "domains":[
-    //      "davietjal.org"
-    //   ],
-    //   "alpha_two_code":"IN"
-    //  },
-    //  {
-    //   "state-province":"Punjab",
-    //   "country":"India",
-    //   "name":"Lovely Professional University",
-    //   "web_pages":[
-    //      "http://www.lpu.in/"
-    //   ],
-    //   "domains":[
-    //      "lpu.in"
-    //   ],
-    //   "alpha_two_code":"IN"
-    //    },
-    //   {
-    //   "state-province":null,
-    //   "country":"India",
-    //   "name":"Somaiya Vidyavihar",
-    //   "web_pages":[
-    //      "https://somaiya.edu/"
-    //   ],
-    //   "domains":[
-    //      "somaiya.edu"
-    //   ],
-    //   "alpha_two_code":"IN"
-    //      },
-      ],
-     fields:
-       [
-      //  {key:"university_name",label:"university_name"},
-      //  {key:"domains",label:"domains"},
-      //  { key: "website_url", label: "website_url" },
-      //  {key:"state_province",label:"state_province"}
-     ],
+      items:[],
+     fields:[],
       value: "",
-      // items: [],
       countries: [],
       filter: null,
       filterOn: [],
