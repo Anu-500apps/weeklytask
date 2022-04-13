@@ -1,62 +1,86 @@
 <template>
   <div>
     <h1 align="center">Country List</h1>
-
-    <b-container>
-      <b-form-select v-model="value" :options="countries"></b-form-select><br><br>
-
+   <b-container>
+      <b-form-select v-model="value" :options="countries"></b-form-select><br /><br />
       <b-button variant="dark" @click="getData">Search</b-button>
-
-      <b-pagination
-        v-model="currentPage"
-        :total-rows="rows"
-        :per-page="perPage"
-        aria-controls="my-table"
-      ></b-pagination>
-
+      <b-pagination v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="my-table">
+      </b-pagination>
       <b-row cols-md="7">
-        <b-table
-          id="my-table"
-          :per-page="perPage"
-          :current-page="currentPage"
-          striped
-          hover
-          :items="items"
-        >
-          <b-col
-            ><p>university_name: {{ value.university_name }}</p></b-col
-          >
-
-          <b-col
-            ><p>domains: {{ value.domains }}</p></b-col
-          >
-
+        <b-table id="my-table" :per-page="perPage" :current-page="currentPage" striped   hover :items="items">
+          <b-col>
+          <p>university_name: {{ value.university_name }}</p></b-col>
+          <b-col><p>domains: {{ value.domains }}</p></b-col>
           <p @click="redirect(value.website_url)">
-            website_url: {{ value.website_url }}
-          </p>
-
-          <!-- <template slot="actions" >
-
-<button class="btn btn-dark" @click="redirect(value.website_url)" :ref="'btn'">website_url: {{value.website_url}}</button>
-
-</template> -->
-
-          <b-col
-            ><p>state_province: {{ value.state_province }}</p></b-col
-          >
+          <a :href="value.website_url" target="_blank">{{value.website_url}}</a>
+          website_url: {{ value.website_url }}</p>
+          <b-col><p>state_province: {{ value.state_province }}</p></b-col>
         </b-table>
       </b-row>
+   </b-container>
+    <b-container mt="5">
+      <div class="row mt=3" id="mytable">
+        <div class="col-md-3">
+          <div class="p-2 alert alert-secondary">
+            <h3>University Name</h3>
+            <draggable class="list-group kanban-column" group="tasks">
+              <div class="list-group-item" v-for="value in countries" :key="value.name">
+                <!-- <b-pagination
+                  v-model="currentPage"
+                  :total-rows="rows"
+                  :per-page="perPage"
+                  aria-controls="">
+                </b-pagination> -->
+                <b-card
+                  v-for="value in items"
+                  :key="value.domains"
+                  class="mb-2">
+                  <b-card-text>university_name:-- {{value.university_name}}
+                  </b-card-text>
+                  <a :href="value.website_url" target="_blank">{{value.website_url}}</a>
+                  <p>domains:--{{ value.domains }}</p>
+                  <p @click="redirect(value.website_url)">
+                    website_url:--{{ value.website_url }}
+                  </p>
+                  <p>state_province:--{{value.state_province}}</p>
+                </b-card>
+              </div>
+            </draggable>
+          </div>
+        </div>
+
+              <!-- <div class="col-md-3">
+                  <div class="p-2 alert alert-primary">
+                  <h3>ArrBackLog</h3>
+                 <draggable class="list-group kanban-column" :list="arrInprogress" group="tasks">
+                 <div class="list-group-item" v-for="element in arrInprogress" :key="element.name">
+                  {{element.name}}
+                 </div>
+                </draggable>
+                 </div>
+                </div> -->
+        <div class="col-md-3">
+          <div class="p-2 alert alert-success">
+            <h3>ArrBackLog</h3>
+            <draggable class="list-group kanban-column"  :list="arrTested"  group="tasks">
+              <div class="list-group-item" v-for="element in arrTested" :key="element.name">
+              </div>
+            </draggable>
+          </div>
+        </div>
+      </div>
     </b-container>
   </div>
 </template>
 
-
 <script>
 const { getNames } = require("country-list");
-
+import draggable from "vuedraggable";
 export default {
-  name: "QuE1",
-
+  name: "QuE2",
+  components: {
+    draggable,
+  },
   data() {
     return {
       perPage: 3,
