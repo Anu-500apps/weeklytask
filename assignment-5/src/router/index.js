@@ -8,6 +8,7 @@ import Que6 from '../components/Que6'
 import Q6 from '../components/Q6'
 import Q1 from '../components/assignment-6/Question1'
 import Q2 from '../components/assignment-6/Question2'
+import Que1 from '../components/assignment-6/Que1-2'
 
 
 Vue.use(Router)
@@ -52,6 +53,7 @@ const routes = [
     },
     {path:'/question1',name:"Question1",component:Q1},
     {path:'/question2',name:"Question2",component:Q2},
+    {path:'/q1',name:"Que1",component:Que1},
 ]
 
 
