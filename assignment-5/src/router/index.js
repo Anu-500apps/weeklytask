@@ -13,6 +13,9 @@ import practice1 from "../components/practice /practice1"
 // import practice2 from "../components/practice /practice2"
 import practice3 from "../components/practice /practice3"
 import practice5 from "../components/practice /practice5"
+import practice10 from "../components/practice /practice10"
+import practice7 from "../components/practice /practice7"
+import practice4 from "../components/practice /practice4"
 
 Vue.use(Router)
 
@@ -60,7 +63,10 @@ const routes = [
     {path:'/p1',name:"practice1",component:practice1},
     // {path:'/p2',name:"practice2",component:practice2},
     {path:'/p3',name:"practice3",component:practice3},
-    {path:'/p5',name:"practice5",component:practice5}
+    {path:'/p5',name:"practice5",component:practice5},
+    {path:'/p10',name:"practice10",component:practice10},
+    {path:'/p7',name:"practice7",component:practice7},
+    {path:'/p4',name:"practice4",component:practice4}
 ]
 
 
