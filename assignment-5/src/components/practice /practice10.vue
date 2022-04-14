@@ -9,7 +9,7 @@ export default {
   name: "PracticE10",
   data() {
     return {
-
+        result:"",
     };
   },
   methods: {
@@ -23,11 +23,9 @@ export default {
         if (value) {
           result[++resIndex] = value;
         }
-        console.log(
-          this.fun([NaN, 0, 15, false, -22, "", undefined, 47, null])
+       this.result=console.log(this.fun([NaN, 0, 15, false, -22, "", undefined, 47, null])
         );
       }
-      return this.result;
     },
   },
 };
