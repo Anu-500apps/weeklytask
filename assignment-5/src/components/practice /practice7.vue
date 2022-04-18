@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h5>Question-7</h5>
+   <h5>Question-7</h5>
    <button type="submit" @click="Duplicates">Click!</button>
 </div>
 </template>

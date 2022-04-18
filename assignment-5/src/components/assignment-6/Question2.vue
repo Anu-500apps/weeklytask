@@ -61,7 +61,7 @@
                 </div> -->
         <div class="col-md-3">
           <div class="p-2 alert alert-success">
-            <h3>ArrBackLog</h3>
+            <h3>Draggable</h3>
             <draggable class="list-group kanban-column"  :list="arrTested"  group="tasks">
               <div class="list-group-item" v-for="element in arrTested" :key="element.name">
               </div>

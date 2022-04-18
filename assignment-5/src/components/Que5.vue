@@ -38,8 +38,6 @@
     </div>
   </div>
 </template>
-
-
 <script>
 var axios = require("axios").default;
 export default {
