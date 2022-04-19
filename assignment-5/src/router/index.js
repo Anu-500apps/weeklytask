@@ -19,8 +19,10 @@ import practice4 from "../components/practice /practice4"
 import practice8 from "../components/practice /practice8"
 import practice2 from "../components/practice /practice2"
 import functions from "../components/practice /functions"
-import Apis from '../components/practice /Api'
-    
+import Api from '../components/practice /Api'
+ import ApiS from '../components/practice /Apis.vue'
+import Que5 from '../components/Que5'
+import ResT from '@/components/Rest'
 Vue.use(Router)
 
 
@@ -29,6 +31,12 @@ const routes = [
         path:'/hello',
         name:"HelloWorld",
         component:HelloWorld
+
+    },
+    {
+        path:'/rest',
+        name:"ResT",
+        component:ResT
 
     },
     {
@@ -74,7 +82,9 @@ const routes = [
     {path:'/p8',name:"practice8",component:practice8},
     {path:'/p2',name:"practice2",component:practice2},
     {path:'/fun',name:"functions",component:functions},
-    {path:'/api',name:"Apis",component:Apis}
+    {path:'/api',name:"Apis",component:Api},
+     {path:'/apis',name:"Apis1",component:ApiS},
+    {path:'/que5',name:"Que5",component:Que5}
 ]
 
 
