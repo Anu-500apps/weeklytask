@@ -34,12 +34,10 @@ export default {
   methods: {
     async getData1() {
       try {
-        let response = await fetch(
-          "http://universities.hipolabs.com/search?country=" + this.text
-        );
-
+        let response = await fetch("http://universities.hipolabs.com/search?country=" + this.text);
         this.posts = await response.json();
-      } catch (error) {
+      }
+       catch (error) {
         console.log(error);
       }
     },

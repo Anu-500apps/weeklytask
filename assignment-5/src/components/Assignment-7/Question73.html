@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>The setTime out</h1>
+    <button type="submit" onclick="out()">click</button>
+    <button type="submit" onclick="presenttym()">Click!</button>
+    <p id="anu"></p>
+</body>
+<script>
+    function presentym() {
+        const date = new Date();
+        console.log(date.toLocaleTimeString());
+        setTimeout(function () {
+            presentym()
+        }, 5000);
+    }
+    function out(){
+      const date = new Date();
+      document.write(date.toLocaleTimeString());
+    }
+    presentym();
+    window.setInterval(out, 5000);
+</script>
+</html>
