@@ -8,16 +8,18 @@
     <Que6 />
     <Que5 />
     <Que52 />
-    <Question76 ref="name" name="Anu">{{name}}></Question76>
-    <button type="submit" @click="parent()">Click!</button>
-    <button-submit type="submit" @click="result()">Your Profile</button-submit>
-
+    <!-- <Question76 ref="name" name="Anu">{{name}}</Question76> -->
+    <!-- <button type="submit" @click="parent()">Click!</button>
+    <button-submit type="submit" @click="result()">Your Profile</button-submit> -->
 <Question77 />
 <Question78 />
 <Question79 />
 <Question72 />
 <Question74 />
-  </div>
+<Q84 :msg="Messege" :name="Name" :number="number" :email="email"></Q84><br />
+ <h2>Name:{{name}}</h2>
+<Q85  @action="emitfun"/> 
+ </div>
 </template>
 
 <script>
@@ -32,7 +34,9 @@
 //import Question78 from './components/Assignment-7/Question78.vue'
 //import Question79 from './components/Assignment-7/Question79.vue'
 //import Question72 from './components/Assignment-7/Question71.vue'
-import Question74 from './components/Assignment-7/Question74.vue'
+//import Question74 from './components/Assignment-7/Question74.vue'
+import Q84 from './components/Assignment-8/Q84.vue'
+import Q85 from './components/Assignment-8/Q85.vue'
 export default {
   name: 'App',
   components: {
@@ -47,19 +51,32 @@ export default {
    //Question78,
    //Question79,
    //Question72,
-   Question74
-   
+   //Question74
+   Q84,
+   Q85
+  },
+  data(){
+    return{
+      Messege:"Welcome to Assignmnet-8",
+      Name:"Anuradha",
+      number:7330797147,
+      email:"Anuradhataddi@gmail.com",
+      name:"change your name"
+    }
   },
   methods:{
-  parent(){
-    this.$refs.name.child();
-    console.log("I am parent")
-  },
-  result(){
-document.write("Hellooo");
+    emitfun(change){
+      this.name=change.name;
 
-}
-}
+    }
+  // parent(){
+  //   this.$refs.name.child();
+  //   console.log("I am parent")
+  // },
+//   result(){
+// document.write("Hellooo");
+// }
+ }
 }
 </script>
 
