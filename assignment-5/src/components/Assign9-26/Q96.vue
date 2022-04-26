@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 align="center">This is Question 6</h1>
+    <h1>This is Question 6 Using Country list</h1>
     <b-form-select v-model="value" :options="countries"></b-form-select>
     <b-button variant="primary" @click="getData">Get Data</b-button>
     <b-card v-for="value in items" :key="value.domains" class="mb-2">

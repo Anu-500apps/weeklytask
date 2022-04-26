@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>This is Question-1</h1>
+        <h1>This is Question-1 Using reverse function</h1>
         <button @click="alpha()">Click</button><br><br>
         <button @click="reverse()">Click!</button>
         <b-table striped hover :items="array" :fields="array1"></b-table>

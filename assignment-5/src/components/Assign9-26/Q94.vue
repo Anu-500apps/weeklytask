@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     usingfilter() {
-        console.log(this.answer)
+
          this.result = this.list.filter((arrow) => {
         return arrow.includes(this.answer);
       })

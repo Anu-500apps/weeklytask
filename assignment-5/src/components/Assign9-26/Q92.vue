@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>This is Question-2</h1>
+        <h1>This is Question-2 Mult and divide methods</h1>
         <form >
        Enter value1: <input type="text" id="id" /><br><br>
        Enter value2: <input type="text" id="id1" /><br><br>
