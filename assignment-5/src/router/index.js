@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '../components/HelloWorld'
- import Que52 from '../components/Que52'
-import Que3 from '../components/Que3'
+import Que52 from '../components/Que52'
 import Que4 from '../components/Que4'
 import Que6 from '../components/Que6'
 import Q6 from '../components/Q6'
@@ -39,36 +38,22 @@ import Q87 from '../components/Assignment-8/Q87'
 import Q88 from '../components/Assignment-8/Q88'
 import Q89 from '../components/Assignment-8/Q89'
 import Q810 from '../components/Assignment-8/Q810'
+import Rough from '../components/practice /rough'
+import Q91 from '../components/Assign9-26/Q91'
+import Q92 from '../components/Assign9-26/Q92'
+import Q93 from '../components/Assign9-26/Q93'
+import Q94 from '../components/Assign9-26/Q94'
+import Q95 from '../components/Assign9-26/Q95'
+import Q96 from '../components/Assign9-26/Q96'
 Vue.use(Router)
 const routes = [
     {path:'/hello', name:"HelloWorld", component:HelloWorld},
     {path:'/rest',name:"ResT",component:ResT},
     {path:'/que52',name:"Que52",component:Que52},
-    {
-        path:'/que3',
-        name:"Que3",
-        component:Que3
-
-    },
-    {
-        path:'/que4',
-        name:"Que4",
-        component:Que4
-
-    },
-    {
-        path:'/que6',
-        name:"Que6",
-        component:Que6
-
-    },
-    {
-        path:'/q6',
-        name:"Q6",
-        component:Q6
-
-    },
-     {path:'/question1',name:"Question1",component:Q1},
+    {path:'/que4',name:"Que4",component:Que4},
+    {path:'/que6',name:"Que6",component:Que6},
+    {path:'/q6',name:"Q6",component:Q6},
+    {path:'/question1',name:"Question1",component:Q1},
     {path:'/question2',name:"Question2",component:Q2},
     {path:'/q1',name:"Que1",component:Que1},
     {path:'/p1',name:"practice1",component:practice1},
@@ -99,7 +84,14 @@ const routes = [
     {path:'/q87',name:"Q87",component:Q87},
     {path:'/q88',name:"Q88",component:Q88},
     {path:'/q89',name:"Q89",component:Q89},
-    {path:'/q810',name:"Q810",component:Q810}
+    {path:'/q810',name:"Q810",component:Q810},
+    {path:'/r1',name:"R1",component:Rough},
+    {path:'/q91',name:"Q91",component:Q91},
+    {path:'/q92',name:"Q92",component:Q92},
+    {path:'/q93',name:"Q93",component:Q93},
+    {path:'/q94',name:"Q94",component:Q94},
+    {path:'/q95',name:"Q95",component:Q95},
+    {path:'/q96',name:"Q96",component:Q96}
 ]
 
 
