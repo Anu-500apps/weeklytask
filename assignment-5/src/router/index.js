@@ -45,6 +45,7 @@ import Q93 from '../components/Assign9-26/Q93'
 import Q94 from '../components/Assign9-26/Q94'
 import Q95 from '../components/Assign9-26/Q95'
 import Q96 from '../components/Assign9-26/Q96'
+import Crud from '../components/27-04-22/Crud'
 Vue.use(Router)
 const routes = [
     {path:'/hello', name:"HelloWorld", component:HelloWorld},
@@ -91,10 +92,9 @@ const routes = [
     {path:'/q93',name:"Q93",component:Q93},
     {path:'/q94',name:"Q94",component:Q94},
     {path:'/q95',name:"Q95",component:Q95},
-    {path:'/q96',name:"Q96",component:Q96}
+    {path:'/q96',name:"Q96",component:Q96},
+    {path:'/crud',name:"Crud",component:Crud}
 ]
-
-
 
 let router = new Router({routes})
 
