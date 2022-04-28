@@ -5,7 +5,6 @@ import Que52 from '../components/Que52'
 import Que4 from '../components/Que4'
 import Que6 from '../components/Que6'
 import Q6 from '../components/Q6'
-import Q1 from '../components/assignment-6/Question1'
 import Q2 from '../components/assignment-6/Question2'
 import Que1 from '../components/assignment-6/Que1-2'
 import practice1 from "../components/practice /practice1"
@@ -46,6 +45,11 @@ import Q94 from '../components/Assign9-26/Q94'
 import Q95 from '../components/Assign9-26/Q95'
 import Q96 from '../components/Assign9-26/Q96'
 import Crud from '../components/27-04-22/Crud'
+import Scrol from '../components/27-04-22/Scrol'
+import Q101 from '../components/Assign10-28/Q101'
+import Q102 from '../components/Assign10-28/Q102'
+//import Q103 from '../components/Assign10-28/Q103'
+
 Vue.use(Router)
 const routes = [
     {path:'/hello', name:"HelloWorld", component:HelloWorld},
@@ -54,7 +58,6 @@ const routes = [
     {path:'/que4',name:"Que4",component:Que4},
     {path:'/que6',name:"Que6",component:Que6},
     {path:'/q6',name:"Q6",component:Q6},
-    {path:'/question1',name:"Question1",component:Q1},
     {path:'/question2',name:"Question2",component:Q2},
     {path:'/q1',name:"Que1",component:Que1},
     {path:'/p1',name:"practice1",component:practice1},
@@ -93,7 +96,12 @@ const routes = [
     {path:'/q94',name:"Q94",component:Q94},
     {path:'/q95',name:"Q95",component:Q95},
     {path:'/q96',name:"Q96",component:Q96},
-    {path:'/crud',name:"Crud",component:Crud}
+    {path:'/crud',name:"Crud",component:Crud},
+    {path:'/scrol',name:"Scrol",component:Scrol},
+    {path:'/q101',name:"Q101",component:Q101},
+    {path:'/q102',name:"Q102",component:Q102},
+   // {path:'/q103',name:"Q103",component:Q103}
+    
 ]
 
 let router = new Router({routes})

@@ -8,17 +8,18 @@
     <Que6 />
     <Que5 />
     <Que52 />
-    <!-- <Question76 ref="name" name="Anu">{{name}}</Question76> -->
-    <!-- <button type="submit" @click="parent()">Click!</button>
-    <button-submit type="submit" @click="result()">Your Profile</button-submit> -->
+    <Q103 msg="welcome to cheerio"  message=[1,2,3,4] />
+        <!-- <Question76 ref="name" name="Anu">{{name}}</Question76>
+     <button type="submit" @click="parent()">Click!</button>
+    <button-submit type="submit" @click="result()">Your Profile</button-submit> --> 
 <Question77 />
 <Question78 />
 <Question79 />
 <Question72 />
 <Question74 />
-<Q84 :msg="Messege" :name="Name" :number="number" :email="email"></Q84><br />
+ <!-- <Q84 :msg="Messege" :name="Name" :number="number" :email="email"></Q84><br />
  <h2>Name:{{name}}</h2>
-<Q85  @action="emitfun"/> 
+<Q85  @action="emitfun"/>   -->
  </div>
 </template>
 
@@ -35,8 +36,9 @@
 //import Question79 from './components/Assignment-7/Question79.vue'
 //import Question72 from './components/Assignment-7/Question71.vue'
 //import Question74 from './components/Assignment-7/Question74.vue'
-import Q84 from './components/Assignment-8/Q84.vue'
-import Q85 from './components/Assignment-8/Q85.vue'
+ //import Q84 from './components/Assignment-8/Q84.vue'
+//import Q85 from './components/Assignment-8/Q85.vue'
+import Q103 from './components/Assign10-28/Q103.vue'
 export default {
   name: 'App',
   components: {
@@ -52,8 +54,9 @@ export default {
    //Question79,
    //Question72,
    //Question74
-   Q84,
-   Q85
+   // Q84,
+   //Q85
+   Q103
   },
   data(){
     return{
@@ -68,11 +71,11 @@ export default {
     emitfun(change){
       this.name=change.name;
 
-    }
-  // parent(){
-  //   this.$refs.name.child();
-  //   console.log("I am parent")
-  // },
+    },
+  parent(){
+    this.$refs.name.child();
+    console.log("I am parent")
+  },
 //   result(){
 // document.write("Hellooo");
 // }
