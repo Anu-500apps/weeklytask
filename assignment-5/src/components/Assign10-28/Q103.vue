@@ -27,10 +27,12 @@ export default {
       for (let i = 0; i < 5; i++) {
         const ip = "192.168.0." + i;
         const url = "https://bootstrap-vue.org/docs" + ip + ".html";
+        const html= "https://vuejs.org/api/composition-api-lifecycle.html#onmounted"+".html";
         axios.get(url).then(response => {
           const $ = cheerio.load(response);
        console.log(ip);
-       console.log($)
+       console.log(url);
+       console.log(html)
           setTimeout(() => {
             if ($(".global_data_cnt_DNSBLBlacklistTest").text() == 243) {
               this.messages.push({
