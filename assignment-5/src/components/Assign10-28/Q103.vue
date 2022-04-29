@@ -1,53 +1,45 @@
  <template>
- <div class="hello">
-   <h1>Question3 Using cheerio</h1>
-    <h1>{{ msg }}</h1>
-     <!-- <ul>
-      <li v-for="(message, index) in messages" :key="index">
-        <b>{{ messages.ip }} [{{ message.type }}]:</b>
-        {{ message.blocked }}
-      </li>
-    </ul>  -->
-    <!-- <button @click="fetchUrl">click</button> -->
-    <h1>{{message}}</h1>
+  <div>
+      <h3>This is Web Scrapping</h3>
   </div>
 </template>
 
 <script>
-import axios from "axios";
-import cheerio from "cheerio";
+const axios = require('axios')
+const cheerio = require('cheerio')
 export default {
-  name: "ScrapIP",
-  props: {
-    msg: String,
-    message: Array
-  },
-  methods: {
-    fetchUrl() {
-      for (let i = 0; i < 5; i++) {
-        const ip = "192.168.0." + i;
-        const url = "https://bootstrap-vue.org/docs" + ip + ".html";
-        const html= "https://vuejs.org/api/composition-api-lifecycle.html#onmounted"+".html";
-        axios.get(url).then(response => {
-          const $ = cheerio.load(response);
-       console.log(ip);
-       console.log(url);
-       console.log(html)
-          setTimeout(() => {
-            if ($(".global_data_cnt_DNSBLBlacklistTest").text() == 243) {
-              this.messages.push({
-                ip: ip,
-                type: "Blacklist Test",
-                blocked: $(".global_data_cnt_DNSBLBlacklistTest").text()
-              });
-            }
-          }, 10000);
-        });
-      }
+    name:"QuE3",
+    data(){
+        return{
+            response:[],
+        }
+    },
+    methods:{
+        getdata(){
+            let url='https://www.msn.com/en-au?AR=2';
+            axios({
+                method:'get',
+                url:url,
+            })
+               .then(function(response){
+                let html=response.data;
+                let $=cheerio.load(html);
+                console.log(html)
+                $("ul.tertiary li").each(function(){
+                    $(this).find('h3').attr('area-lable');
+                });
+            })
+           // console.log(html)
+        }
+    
+    },
+    created(){
+        this.getdata();
     }
-  },
-  created() {
-    this.fetchUrl();
-  }
-};
+
+}
 </script>
+
+<style>
+
+</style>
