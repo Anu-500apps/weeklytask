@@ -7,6 +7,7 @@ import Que6 from '../components/Que6'
 import Q6 from '../components/Q6'
 import Q2 from '../components/assignment-6/Question2'
 import Que1 from '../components/assignment-6/Que1-2'
+import Q3 from '../components/assignment-6/Question3'
 import practice1 from "../components/practice /practice1"
 // import practice2 from "../components/practice /practice2"
 import practice3 from "../components/practice /practice3"
@@ -48,7 +49,7 @@ import Crud from '../components/27-04-22/Crud'
 import Scrol from '../components/27-04-22/Scrol'
 import Q101 from '../components/Assign10-28/Q101'
 import Q102 from '../components/Assign10-28/Q102'
-//import Q103 from '../components/Assign10-28/Q103'
+import Q103 from '../components/Assign10-28/Q103'
 
 Vue.use(Router)
 const routes = [
@@ -100,7 +101,10 @@ const routes = [
     {path:'/scrol',name:"Scrol",component:Scrol},
     {path:'/q101',name:"Q101",component:Q101},
     {path:'/q102',name:"Q102",component:Q102},
-   // {path:'/q103',name:"Q103",component:Q103}
+   {path:'/q103',name:"Q103",component:Q103},
+   {path:'/q3',name:"Q3",component:Q3},
+
+
     
 ]
 

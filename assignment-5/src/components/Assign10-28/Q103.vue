@@ -29,7 +29,7 @@ export default {
                     $(this).find('h3').attr('area-lable');
                 });
             })
-           // console.log(html)
+          //console.log(html)
         }
     
     },
