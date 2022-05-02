@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>This is Question-6 using reduce operator</h1>
+    <h1>This is Question-6 </h1>
     <button type="submit" @click="Most">Click</button>
     <p>{{a1}}{{a2}}</p>
   </div>

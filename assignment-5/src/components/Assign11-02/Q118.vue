@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>this is Question-8</h1>
+
     <button @click="fun()">click here</button>
   </div>
 </template>
