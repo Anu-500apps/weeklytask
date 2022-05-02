@@ -3,9 +3,7 @@
     <h1 align="center">This is Question-6</h1>
     <b-dropdown  text="Country" class="m-md-2">
       <b-dropdown-item @click="India()">India</b-dropdown-item>
-
       <b-dropdown-item @click="china()">china</b-dropdown-item>
-
       <b-dropdown-item @click="canada()">canada</b-dropdown-item>
     </b-dropdown>
     <b-card>
@@ -30,16 +28,16 @@ export default {
   data() {
     return {
       posts: " ",
+      
     };
   },
 
   methods: {
-    async getData() {
+    async india() {
       try {
         let response = await fetch(
           "http://universities.hipolabs.com/search?country=India"
         );
-
         this.posts = await response.json();
       } catch (error) {
         console.log(error);

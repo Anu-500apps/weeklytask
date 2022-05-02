@@ -9,7 +9,7 @@ import Q2 from '../components/assignment-6/Question2'
 import Que1 from '../components/assignment-6/Que1-2'
 import Q3 from '../components/assignment-6/Question3'
 import practice1 from "../components/practice /practice1"
-// import practice2 from "../components/practice /practice2"
+//import practice2 from "../components/practice /practice2"
 import practice3 from "../components/practice /practice3"
 import practice5 from "../components/practice /practice5"
 import practice10 from "../components/practice /practice10"
@@ -50,6 +50,19 @@ import Scrol from '../components/27-04-22/Scrol'
 import Q101 from '../components/Assign10-28/Q101'
 import Q102 from '../components/Assign10-28/Q102'
 import Q103 from '../components/Assign10-28/Q103'
+import Q111 from '../components/Assign11-02/Q111'
+import Q112 from '../components/Assign11-02/Q112'
+import Q113 from '../components/Assign11-02/Q113'
+import Q114 from '../components/Assign11-02/Q114'
+import Q115 from '../components/Assign11-02/Q115'
+import Q117 from '../components/Assign11-02/Q117'
+import Q116 from '../components/Assign11-02/Q116'
+import Q118 from '../components/Assign11-02/Q118'
+
+
+
+
+
 
 Vue.use(Router)
 const routes = [
@@ -103,6 +116,18 @@ const routes = [
     {path:'/q102',name:"Q102",component:Q102},
    {path:'/q103',name:"Q103",component:Q103},
    {path:'/q3',name:"Q3",component:Q3},
+   {path:'/q111',name:"Q111",component:Q111},
+   {path:'/q112',name:"Q112",component:Q112},
+   {path:'/q113',name:"Q113",component:Q113},
+   {path:'/q114',name:"Q114",component:Q114},
+   {path:'/q115',name:"Q115",component:Q115},
+   {path:'/q116',name:"Q116",component:Q116},
+   {path:'/q117',name:"Q117",component:Q117},
+   {path:'/q118',name:"Q118",component:Q118},
+
+
+
+
 
 
     

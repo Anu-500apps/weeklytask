@@ -15,14 +15,13 @@
         </b-table>
         </b-col></b-row>
     <b-container mt="5">
-      <div class="row mt=3" id="mytable">
+      <div class="row mt=3" >
         <div class="col-md-3">
           <div class="p-2 alert alert-warning">
             <h3>CountriesData</h3>
-            <draggable class="list-group kanban-column" group="tasks">
-              <div class="list-group-item" v-for="value in countries" :key="value.name">
+            <draggable class="list-group kanban-column" group="tasks" v-for="value in items" :key="value.domains" :per-page="perPage" :current-page="currentPage">
                 <b-row><b-col cols=12>
-                <b-card v-for="value in items" :key="value.domains" class="mb-2">
+                <b-card >
                   <b-card-text>University_name:{{value.university_name}}
                   </b-card-text>
                   <p>Website_url:
@@ -31,13 +30,12 @@
                   <p>State_province:{{value.state_province}}</p>
                 </b-card>
                 </b-col></b-row>
-              </div>
             </draggable>
           </div>
         </div>
           <div class="p-2 alert alert-warning">
+            <draggable  group="tasks">
             <h3>This is the Draggable List</h3>
-            <draggable :list="arrTested" group="tasks">
             </draggable>
           </div>
       </div>
@@ -55,7 +53,7 @@ export default {
   },
   data() {
     return {
-      perPage: 1,
+      perPage: 5,
       currentPage: 1,
       value: "",
       items: [],

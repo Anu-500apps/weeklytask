@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 align="center">This is Props Concepts</h4>
+    <h4 align="center">This is ref Concepts</h4>
   </div>
 </template>
 <script>

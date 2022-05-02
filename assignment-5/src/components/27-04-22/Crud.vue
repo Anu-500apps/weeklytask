@@ -18,7 +18,6 @@
     </center>
   </div>
 </template>
-
 <script>
 import Crudtable from './Crudtable.vue'
 export default {

@@ -8,7 +8,6 @@
     ><br /><br />
     <b-card>
       <b-card v-for="data1 in posts" :key="data1.id">
-        <b-container class="bv-example-row">
           <b-row>
             <b-col cols="3.5">University Name:{{ data1.name }}</b-col>
           </b-row>
@@ -18,7 +17,6 @@
        {{ data1.web_pages[0] }}</a> 
         </b-col>
           </b-row>
-        </b-container>
       </b-card>
     </b-card>
   </div>

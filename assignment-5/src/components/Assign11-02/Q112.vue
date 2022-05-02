@@ -10,16 +10,16 @@ export default {
     name:"QuestioN2",
    data() {
        return{
-          double:"",
+          double:[],
        }
         
     },
     methods:{
         reduce() {
             var a = [5, 15, 20, 25, 30];
-            this.c = a.reduce((a, b) => {
+            a.reduce((c,b) => {
                 this.double = b * 2;
-                this.double=console.log(this.double);
+                document.write(this.double);
             }, []);
         }
     }

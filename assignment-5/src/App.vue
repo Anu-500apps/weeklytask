@@ -8,7 +8,6 @@
     <Que6 />
     <Que5 />
     <Que52 />
-    <Q103 msg="welcome to cheerio"  message=[1,2,3,4] />
         <!-- <Question76 ref="name" name="Anu">{{name}}</Question76>
      <button type="submit" @click="parent()">Click!</button>
     <button-submit type="submit" @click="result()">Your Profile</button-submit> --> 
@@ -38,7 +37,6 @@
 //import Question74 from './components/Assignment-7/Question74.vue'
  //import Q84 from './components/Assignment-8/Q84.vue'
 //import Q85 from './components/Assignment-8/Q85.vue'
-import Q103 from './components/Assign10-28/Q103.vue'
 export default {
   name: 'App',
   components: {
@@ -56,7 +54,7 @@ export default {
    //Question74
    // Q84,
    //Q85
-   Q103
+
   },
   data(){
     return{

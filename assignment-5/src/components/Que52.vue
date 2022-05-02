@@ -11,7 +11,6 @@
           </b-row>
           <b-row>
             <b-col cols="1.5">Domains:{{ data1.domains }}</b-col>
-
             <b-col cols="10">Website :{{ data1.web_pages[0] }}</b-col>
           </b-row>
           </b-container>
@@ -19,18 +18,14 @@
       </b-card>
   </div>
 </template>
-
-
 <script>
 export default {
   name: "queS4",
-
   data() {
     return {
       posts: " ",
     };
   },
-
   methods: {
     async getData1() {
       try {
@@ -42,7 +37,6 @@ export default {
       }
     },
   },
-
   created() {
     this.getData1();
   },

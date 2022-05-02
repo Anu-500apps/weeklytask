@@ -15,7 +15,7 @@ export default {
   data() {
     return {
      user:userdata,
-      value: "",
+     // value: "",
     //   items: [],
     //   posts: " ",
       fields: ["name", "email"],

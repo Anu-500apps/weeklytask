@@ -1,6 +1,7 @@
 <template>
   <div>
-      <h3 align="center"></h3>This is Question-5<center>
+      <h3 align="center">This is Question-5</h3>
+      <center>
       <button @click="fullnames">Click!</button>
     </center>
   </div>

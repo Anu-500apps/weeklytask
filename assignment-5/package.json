@@ -17,6 +17,7 @@
     "math": "^0.0.3",
     "request-promise": "^4.2.6",
     "vue": "^2.6.14",
+    "vue-infinite-scroll": "^2.0.2",
     "vue-router": "3.0.1",
     "vuedraggable": "^2.24.3"
   },

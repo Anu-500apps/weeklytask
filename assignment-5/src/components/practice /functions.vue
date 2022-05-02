@@ -15,7 +15,11 @@ export default {
   data() {
     return {
       studentDetails:[],
-      students: [{ name: "Anu", age: 22 },{ name: "Anu", age: 24 },{ name: "anusha", age: 20 },{ name: "Navya", age: 25 },{ name: "sruthi", age: 21 },
+      students: [{ name: "Anu", age: 22 },
+      { name: "Anu", age: 24 },
+      { name: "anusha", age: 20 },
+      { name: "Navya", age: 25 },
+      { name: "sruthi", age: 21 },
       ],
       // array: [4, 7, 6, 9, 6, 3],
     };
@@ -34,8 +38,8 @@ export default {
       return this.studentDetails.name
     },
     f1() {
-      this.students.forEach((anu) => {
-        console.log(anu);
+      this.students.forEach((arrow) => {
+        console.log(arrow);
       });
     },
     f2() {

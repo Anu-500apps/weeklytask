@@ -43,15 +43,12 @@ export default {
     Edit(item) {
       this.modalShow = true;
       this.editedIndex = this.tableData.indexOf(item);
-
       this.editedItem = Object.assign({}, item);
     },
-
     Delete(item) {
       const index = this.tableData.indexOf(item);
       confirm("Are you sure you want to delete this item?") &&
         this.tableData.splice(index, 1);
-
       axios.delete(this.endpoint + "/" + item.id);
     },
     close() {

@@ -84,17 +84,12 @@ export default {
   data() {
     return {
       perPage: 3,
-
       currentPage: 1,
-
       value: "",
-
       items: [],
-
       countries: [],
     };
   },
-
   mounted() {
     let countries = getNames();
 

@@ -20,9 +20,9 @@ export default {
     methods:{
         search(){
         const array = ["agile", "crm", "mantra", "technologies", "500apps", "infinity"];
-            const substring = document.myform.latter.value;
+            const a = document.myform.latter.value;
             const match = array.find(element => {
-                if (element.includes(substring)) {
+                if (element.includes(a)) {
 
                     return true;
                }

@@ -23,7 +23,6 @@ export default {
            let posts=await axios.get('http://universities.hipolabs.com/search?country='+this.text)
           console.log(posts)
       }
-         
 
     }
   //    async mounted(){
