@@ -45,8 +45,8 @@ import Q93 from '../components/Assign9-26/Q93'
 import Q94 from '../components/Assign9-26/Q94'
 import Q95 from '../components/Assign9-26/Q95'
 import Q96 from '../components/Assign9-26/Q96'
-import Crud from '../components/27-04-22/Crud'
-import Scrol from '../components/27-04-22/Scrol'
+import Crud from '../components/04-05-2022/Crud'
+import Scrol from '../components/04-05-2022/Scrol'
 import Q101 from '../components/Assign10-28/Q101'
 import Q102 from '../components/Assign10-28/Q102'
 import Q103 from '../components/Assign10-28/Q103'
@@ -58,6 +58,9 @@ import Q115 from '../components/Assign11-02/Q115'
 import Q117 from '../components/Assign11-02/Q117'
 import Q116 from '../components/Assign11-02/Q116'
 import Q118 from '../components/Assign11-02/Q118'
+import Spin from '../components/04-05-2022/spinner'
+import hover from '../components/04-05-2022/Hoverdirective'
+
 
 
 
@@ -124,6 +127,9 @@ const routes = [
    {path:'/q116',name:"Q116",component:Q116},
    {path:'/q117',name:"Q117",component:Q117},
    {path:'/q118',name:"Q118",component:Q118},
+   {path:'/spin',name:"Spin",component:Spin},
+   {path:'/hover',name:"hover",component:hover},
+
 
 
 
