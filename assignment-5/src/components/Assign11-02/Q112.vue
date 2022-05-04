@@ -5,14 +5,12 @@
     </div>
 </template>
 <script>
-
 export default {
     name:"QuestioN2",
    data() {
        return{
           double:[],
        }
-        
     },
     methods:{
         reduce() {

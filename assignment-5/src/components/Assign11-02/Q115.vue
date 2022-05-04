@@ -3,7 +3,6 @@
         <h1>Question-5</h1>
         <button type="submit" @click="list">Click!</button>
         <p>{{r1}}</p><p>{{r2}}</p><p>{{r3}}</p>
-
    </div>
 </template>
 <script>
@@ -16,7 +15,6 @@ export default {
             r2:[],
             r3:[]
         }
-        
     },
     methods:{
         list(){
