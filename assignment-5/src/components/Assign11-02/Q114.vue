@@ -17,7 +17,6 @@ export default {
       },
     };
   },
-
   methods: {
     result() {
       document.write(this.array("This is an array")+" and ");
