@@ -6,8 +6,7 @@ import { BootstrapVue } from "bootstrap-vue";
 import 'bootstrap/dist/css/bootstrap.css'
 
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-
+export const bus=new Vue();
 Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false

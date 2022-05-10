@@ -45,7 +45,7 @@ import Q93 from '../components/Assign9-26/Q93'
 import Q94 from '../components/Assign9-26/Q94'
 import Q95 from '../components/Assign9-26/Q95'
 import Q96 from '../components/Assign9-26/Q96'
-import Crud from '../components/04-05-2022/Crud'
+//import Crud from '../components/04-05-2022/Crud'
 import Scrol from '../components/04-05-2022/Scrol'
 import Q101 from '../components/Assign10-28/Q101'
 import Q102 from '../components/Assign10-28/Q102'
@@ -60,6 +60,14 @@ import Q116 from '../components/Assign11-02/Q116'
 import Q118 from '../components/Assign11-02/Q118'
 import Spin from '../components/04-05-2022/spinner'
 import hover from '../components/04-05-2022/Hoverdirective'
+import balert from '../components/05-05-22/balert'
+import sidebar from '../components/05-05-22/sidebar'
+import Parent from '../components/06-05-22/Parent'
+import Parent1 from '../components/06-05-22/parent1'
+import Accord from '../components/06-05-22/Accord'
+import accord from '../components/06-05-22/accord'
+import Question1t from '../components/10-5-2022/Question1'
+import Question2t from '../components/10-5-2022/Question2'
 
 
 
@@ -113,7 +121,7 @@ const routes = [
     {path:'/q94',name:"Q94",component:Q94},
     {path:'/q95',name:"Q95",component:Q95},
     {path:'/q96',name:"Q96",component:Q96},
-    {path:'/crud',name:"Crud",component:Crud},
+    //{path:'/crud',name:"Crud",component:Crud},
     {path:'/scrol',name:"Scrol",component:Scrol},
     {path:'/q101',name:"Q101",component:Q101},
     {path:'/q102',name:"Q102",component:Q102},
@@ -129,6 +137,17 @@ const routes = [
    {path:'/q118',name:"Q118",component:Q118},
    {path:'/spin',name:"Spin",component:Spin},
    {path:'/hover',name:"hover",component:hover},
+   {path:'/balert',name:"balert",component:balert},
+   {path:'/sidebar',name:"sidebar",component:sidebar},
+   {path:'/parent',name:"Parent",component:Parent},
+   {path:'/parent1',name:"Parent1",component:Parent1},
+   {path:'/accord',name:"Accord",component:Accord},
+   {path:'/accord1',name:"accord",component:accord},
+   {path:'/question1t',name:"Question1t",component:Question1t},
+   {path:'/question2t',name:"Question2t",component:Question2t},
+
+   
+
 
 
 
