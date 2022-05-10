@@ -1,31 +1,27 @@
 <template>
-
   <div>
-      <h1>Question1</h1>
-    <b-form id="form">
-      Enter product name:<b-form-input
+    <h1>Question1</h1>
+    <b-form>
+      Name:<b-form-input
         id="name"
-        placeholder="Enter product name"></b-form-input>
-
-      Enter product price:<b-form-input
+        placeholder="Enter product name"
+      ></b-form-input>
+      Price:<b-form-input
         id="price"
-        placeholder="Enter product price:"></b-form-input>
-
-      Enter product category:<b-form-input
+        placeholder="Enter product price:"
+      ></b-form-input>
+      Category:<b-form-input
         id="category"
-        placeholder="Enter product category"></b-form-input>
-
-      <b-button @click="Add()">Add</b-button><br /><br />
+        placeholder="Enter product category"
+      ></b-form-input>
+      <b-button @click="Add()">Add</b-button>
     </b-form>
-
     <b-table striped hover :items="items" :fields="fields"></b-table>
   </div>
 </template>
-
 <script>
 export default {
   name: "QuE1",
-
   data() {
     return {
       items: [
@@ -35,7 +31,6 @@ export default {
           productcategory: "",
         },
       ],
-
       fields: [],
     };
   },
