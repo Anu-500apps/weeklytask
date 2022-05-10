@@ -30,9 +30,9 @@ export default {
     return {
       items: [
         {
-          productname: "icecreame",
-          productprice: "50",
-          productcategory: "chocolate",
+          productname: "",
+          productprice: "",
+          productcategory: "",
         },
       ],
 

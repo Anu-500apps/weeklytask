@@ -8,9 +8,9 @@
     <Que6 />
     <Que5 />
     <Que52 />
-        <!-- <Question76 ref="name" name="Anu">{{name}}</Question76>
-     <button type="submit" @click="parent()">Click!</button>
-    <button-submit type="submit" @click="result()">Your Profile</button-submit> --> 
+       <!-- <Question76 ref="name"></Question76>
+     <button type="submit" @click="parent()">Click!</button> -->
+    <!-- <button-submit type="submit" @click="result()">Your Profile</button-submit>  -->
 <Question77 />
 <Question78 />
 <Question79 />
@@ -19,6 +19,7 @@
  <!-- <Q84 :msg="Messege" :name="Name" :number="number" :email="email"></Q84><br />
  <h2>Name:{{name}}</h2>
 <Q85  @action="emitfun"/>   -->
+<Q1 />
  </div>
 </template>
 
@@ -37,6 +38,7 @@
 //import Question74 from './components/Assignment-7/Question74.vue'
  //import Q84 from './components/Assignment-8/Q84.vue'
 //import Q85 from './components/Assignment-8/Q85.vue'
+//import Q1 from './components/10-5-2022/Question1.vue'
 export default {
   name: 'App',
   components: {
@@ -54,6 +56,7 @@ export default {
    //Question74
    // Q84,
    //Q85
+   //Q1
 
   },
   data(){
