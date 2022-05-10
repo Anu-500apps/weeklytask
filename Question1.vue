@@ -36,9 +36,9 @@ export default {
     return {
       items: [
         {
-          productname: "Chocolate",
-          productprice: "10",
-          productcategory: "chocolate",
+          productname: "",
+          productprice: "",
+          productcategory: "",
         },
       ],
 
