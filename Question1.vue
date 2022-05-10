@@ -5,25 +5,15 @@
     <b-form id="form">
       Enter product name:<b-form-input
         id="name"
-        class="name"
-        placeholder="Enter product name"
-      ></b-form-input>
-
+        placeholder="Enter product name"></b-form-input>
       Enter product price:<b-form-input
         id="price"
-        class="prices"
-        placeholder="Enter product price:"
-      ></b-form-input>
-
+        placeholder="Enter product price:"></b-form-input>
       Enter product category:<b-form-input
         id="category"
-        class="categories"
-        placeholder="Enter product category"
-      ></b-form-input>
-
+        placeholder="Enter product category"></b-form-input>
       <b-button @click="Add()">Add</b-button><br /><br />
     </b-form>
-
     <b-table striped hover :items="items" :fields="fields"></b-table>
   </div>
 </template>
