@@ -1,0 +1,23 @@
+<html>
+<body>
+<h4>JavaScript addEventListener()</h4>
+<button id="myBtn">Event handlers</button>
+<p id="demo"></p>
+<script>
+var event = document.getElementById("myBtn");
+event.addEventListener("mouseover", mosueOver);
+event.addEventListener("click", mouseclick);
+event.addEventListener("mouseout", mouseOut);
+function mosueOver() {
+  document.getElementById("demo").innerHTML = "Moused over";
+}
+function mouseclick() {
+  document.getElementById("demo").innerHTML = "Clicked";
+}
+function mouseOut() {
+  document.getElementById("demo").innerHTML = "Moused out";
+}
+</script>
+
+</body>
+</html>
