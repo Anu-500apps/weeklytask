@@ -68,13 +68,6 @@ import Accord from '../components/06-05-22/Accord'
 import accord from '../components/06-05-22/accord'
 import Question1t from '../components/10-5-2022/Question1'
 import Question2t from '../components/10-5-2022/Question2'
-
-
-
-
-
-
-
 Vue.use(Router)
 const routes = [
     {path:'/hello', name:"HelloWorld", component:HelloWorld},
@@ -145,6 +138,7 @@ const routes = [
    {path:'/accord1',name:"accord",component:accord},
    {path:'/question1t',name:"Question1t",component:Question1t},
    {path:'/question2t',name:"Question2t",component:Question2t},
+  
 
    
 
