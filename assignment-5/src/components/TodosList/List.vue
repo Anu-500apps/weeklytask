@@ -1,41 +1,46 @@
 <template>
   <div>
-   <div class="todo-list" >
-    <div class="todo-item" v-for="todo in todos" :key="todo.id">
-      <table>{{ todo.title }}</table>
-      <input
-        type="checkbox"
-        name="todo.id"
-        v-on:change="updateTodo(todo)"
-        v-bind:checked="todo.completed"
-      />
+    <div class="todo-list">
+         <b-button block v-b-toggle.accordion-1 variant="primary">Today Tasks</b-button>
+           <div class="todo-item" v-for="todo in todos" :key="todo.id">
+         <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+        <b-list-group>
+          <b-list-group-item
+            class="d-flex justify-content-between align-items-center"
+          >
+            <p>{{ todo.title }}</p>
+            <b-form-checkbox
+            class="checkbox"
+              type="checkbox"
+              name="todo.id"
+              v-on:change="updateTodo(todo)"
+              v-bind:checked="todo.completed"
+            />
+          </b-list-group-item>
+          
+        </b-list-group>
+         </b-collapse>
+      </div>
+      <p>Completed Tasks: {{ todosCount }}</p>
     </div>
-    <p>Completed Todos: {{ todosCount }}</p>
-  </div>
   </div>
 </template>
 <script>
 export default {
-  name:"TodoList",
-  created: function() {
-    this.getTodos;
-  },
+  name:"LiSt",
   computed: {
     todos() {
-      console.log("todosList=======",this.$store.state.todoList)
       return this.$store.state.todoList;
     },
     todosCount() {
       return this.$store.getters.completeTodosLength;
     },
-    getTodos() {
-      return this.$store.dispatch('getTodos');
-    },
   },
   methods: {
-    updateTodo: function(todo) {
-      this.$store.commit('updateTodo', todo.id);
+    updateTodo: function (todo) {
+      this.$store.commit("updateTodo", todo.id);
     },
   },
 };
 </script>
+
