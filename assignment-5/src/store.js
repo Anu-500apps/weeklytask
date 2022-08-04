@@ -15,6 +15,7 @@ const vuexLocal = new VuexPersistence({
     todoList: [],
   },
   mutations: {
+    // For adding a single to-do item
     addTodo(state, title) {
       state.todoList = [
         ...state.todoList,
@@ -25,9 +26,13 @@ const vuexLocal = new VuexPersistence({
         },
       ];
     },
-    addTodos(state, todos) {    
+    // For adding an array of to-dos
+    addTodos(state, todos) {   
+      console.log("sjadhjkhb",todos) 
       state.todoList = todos;
     },
+
+    // For updating the completed status of a to-do item
     updateTodo(state, todoId) {
       state.todoList = state.todoList.map((item) => {
         if (item.id === todoId) {

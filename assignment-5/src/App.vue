@@ -20,7 +20,7 @@
  <h2>Name:{{name}}</h2>
 <Q85  @action="emitfun"/>   -->
 <!-- <Q1 /> -->
-<TodosForm/>
+<!-- <TodosForm/> -->
 <ToDos/>
 
  </div>
@@ -43,7 +43,7 @@
 //import Q85 from './components/Assignment-8/Q85.vue'
 //import Q1 from './components/10-5-2022/Question1.vue'
 
-import TodosForm from '../src/components/TodosList/TodosForm.vue'
+//import TodosForm from '../src/components/TodosList/TodosForm.vue'
 import ToDos from './components/TodosList/List.vue'
 export default {
   name: 'App',
@@ -63,7 +63,7 @@ export default {
    // Q84,
    //Q85
    //Q1
-    TodosForm,
+    // TodosForm,
    ToDos,
   
 
