@@ -19,47 +19,55 @@
             >
           </b-col>
         </b-row>
-      </b-container>
-    </b-form><br><br>
-    <div class="todo-list">
-      <b-button block v-b-toggle.accordion-1 variant="primary"
-        ><p class="ml-2 pl-1">Today Tasks</p></b-button
-      >
-      <p>Completed Tasks: {{ todosCount }}</p>
-      <div class="todo-item" v-for="todo in todos" :key="todo.id">
-        <b-collapse
-          id="accordion-1"
-          visible
-          accordion="my-accordion"
-          role="tabpanel"
-        >
-          <b-list-group>
-            <b-list-group-item
-              class="d-flex justify-content-between align-items-center"
+      </b-container> </b-form
+    ><br /><br />
+    <b-row>
+      <b-col cols="2">
+      </b-col>
+      <b-col cols="8">
+        <div class="todo-list">
+          <b-button block v-b-toggle.accordion-1 variant="primary"
+            ><p class="mb-0 d-flex align-items-center">Today Tasks</p>
+            <p class="mb-2 d-flex align-items-right">
+              Completed Tasks: {{ todosCount }}
+            </p></b-button
+          >
+
+          <div class="todo-item" v-for="todo in todos" :key="todo.id">
+            <b-collapse
+              id="accordion-1"
+              visible
+              accordion="my-accordion"
+              role="tabpanel"
             >
-              <p>{{ todo.title }}</p>
-              <b-form-checkbox
-                class="checkbox mr-10"
-                type="checkbox"
-                name="todo.id"
-                v-on:change="updateTodo(todo)"
-                v-bind:checked="todo.completed"
-              ></b-form-checkbox>
-              <i class="fa-solid fa-trash"></i>
-              <b-link href="#" class="option-icon-delete ml-4">
-                <span
-                  class="fe fe-trash-2"
-                  @click="deleteTask"
-                  v-b-tooltip:hover
-                  title="Delete"
-                  ><i>Delete</i></span
-                ></b-link
+              <div
+                class="mb-2 d-flex justify-content-between align-items-center"
               >
-            </b-list-group-item>
-          </b-list-group>
-        </b-collapse>
-      </div>
-    </div>
+                <li class="mb-0 text-muted text-left">
+                  {{ todo.title }} {{ todo.date }}
+                </li>
+                <div>
+                  <b-form-checkbox
+                    class="checkbox mr-1"
+                    type="checkbox"
+                    name="todo.id"
+                    v-on:change="updateTodo(todo)"
+                    v-bind:checked="todo.completed"
+                  ></b-form-checkbox>
+                  <b-icon
+                    class="mb-0 text-muted text-left"
+                    icon="trash"
+                    @click="deleteTask(todo.id)"
+                    v-b-tooltip:hover
+                    title="Delete"
+                  ></b-icon>
+                </div>
+              </div>
+            </b-collapse>
+          </div>
+        </div>
+      </b-col>
+    </b-row>
   </div>
 </template>
 <script>
@@ -68,6 +76,7 @@ export default {
   data() {
     return {
       todo: "",
+      value: "",
     };
   },
   computed: {
@@ -83,7 +92,6 @@ export default {
   methods: {
     // To commit from the $store
     submitTodo() {
-      console.log("subit",this.todo) 
       this.$store.commit("addTodo", this.todo);
       // For empty the input field
       this.todo = "";
@@ -93,18 +101,14 @@ export default {
      * @param {Array} todo it have id,title,task status
      */
     updateTodo(todo) {
-      console.log("todo",todo)
       this.$store.commit("updateTodo", todo.id);
     },
-
-    // Delete the each item in that array
-    deleteTask() {
-      let list = this.$store.state.todoList;
-      let index = list.findIndex((item) => {
-        console.log("item",item,list.id)
-        return item.id == list.id;
-      });
-      list.splice(index, 1);
+    /**
+     *  For delete the item in the list.
+     * @param {Array} id item id
+     */
+    deleteTask(id) {
+      this.$store.commit("deleteTodo", id);
     },
   },
 };
