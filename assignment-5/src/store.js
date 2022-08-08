@@ -13,6 +13,7 @@ const store = new Vuex.Store({
   namespaced: true,
   state: {
     todoList: [],
+    filterList: [],
   },
   mutations: {
     // For adding a single to-do item
@@ -22,7 +23,9 @@ const store = new Vuex.Store({
           id: Math.random(),
           title,
           completed: false,
-          date: new Date(),
+          date: `${new Date().getFullYear()}-0${
+            new Date().getMonth()
+          }-0${new Date().getDate()}`,
         },
         ...state.todoList,
       ];
@@ -48,8 +51,12 @@ const store = new Vuex.Store({
         if (list[i].id == id) return list.splice(i, 1);
       }
     },
+    // For reset to filter the todoList
+    resetTodo(state, todoList) {
+      state.filterList = todoList;
+    },
   },
-  // This should be pasted after the mutations property
+ 
   getters: {
     completeTodosLength: (state) => {
       const completeTodos = state.todoList.filter((item) => item.completed);
